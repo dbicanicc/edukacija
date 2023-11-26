@@ -36,7 +36,7 @@ class SmartKeyApp:
         self.unlock_pin = ""
 
         # Gumb za brisanje posljednjeg unesenog broja
-        self.btn_back = tk.Button(self.frame, text="Povratak", command=self.delete_last_number)
+        self.btn_back = tk.Button(self.frame, text="Back", command=self.delete_last_number)
         self.btn_back.grid(row=6, column=0, columnspan=2, padx=5, pady=10)
 
         # Unos za PIN
@@ -52,7 +52,7 @@ class SmartKeyApp:
         self.btn_call.update()
 
         for _ in range(5):
-            self.btn_call.config(bg="purple")
+            self.btn_call.config(bg="red")
             self.btn_call.update()
             self.root.after(300)
             self.btn_call.config(bg="light gray")
@@ -76,7 +76,7 @@ class SmartKeyApp:
         if user:
             self.result_entry.config(state="normal")  # Omogući unos u Entry widget za prikaz rezultata
             self.result_entry.delete(0, tk.END)  # Obrišite prethodni rezultat
-            self.result_entry.insert(tk.END, "WELCOME" +" "+ user.ime)  # Ispis poruke i imena osobe
+            self.result_entry.insert(tk.END, "WELCOME HOME" +" "+ user.ime)  # Ispis poruke i imena osobe
             self.result_entry.config(state="readonly")  # Ponovno onemogući unos u Entry widget
         else:
             self.result_entry.config(state="normal")
