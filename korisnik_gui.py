@@ -81,7 +81,7 @@ class SmartKeyApp:
         else:
             self.result_entry.config(state="normal")
             self.result_entry.delete(0, tk.END)
-            self.result_entry.insert(tk.END, "Pogrešan PIN")
+            self.result_entry.insert(tk.END, "Pogrešan unos")
             self.result_entry.config(state="readonly")
 
         session.close()
